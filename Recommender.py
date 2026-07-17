@@ -18,6 +18,8 @@ def get_read_later_table():
 with gr.Blocks() as demo:
     with gr.Row():
         with gr.Column():
+            gr.Markdown("## 📖 Book Recommender System")
+            gr.Markdown("Enter a book you've read, indicate if you own it, and provide a rating. Click 'Get Recommendations!' to receive personalized book suggestions and then adjust your reading list.")
             category_input = gr.Textbox(label="Enter a book that you read", placeholder="e.g., Dune, Sapiens, The Hobbit")
             own_book_checkbox = gr.Checkbox(label="Do you own this book?", value=False)
             rating = gr.Radio(
